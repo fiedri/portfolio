@@ -7,7 +7,7 @@ published: true
 ---
 Creo que una de las cosas que más me causó indignación este año fue que haya parranda en mi refugio temporal (la casa donde vivo), no estar invitado y tener que calarme la música y la gente cantando karaoke hasta tarde. Todo esto sacrificando mis valiosas horas de sueño por pura obstinación ajena.
 
-Hasta que recordé que soy informático. Me pregunté qué podía hacer con este vasto conocimiento en redes y recordé que hace tiempo había probado un script para realizar **Bluesmack** (un ataque de denegación de servicio a dispositivos Bluetooth). Mi primera idea fue imponer mi poder como hacker silenciando el receptor directamente. Sin embargo, encontrar la dirección MAC del radio fue imposible; tras tres horas de búsqueda fallida, escuché un anuncio de YouTube saliendo por las cornetas.
+Hasta que recordé que soy informático. Me pregunté qué podía hacer con este vasto conocimiento en las artes digitales y recordé que hace tiempo había probado un script para realizar **Bluesmack** (un ataque de denegación de servicio a dispositivos Bluetooth). Mi primera idea fue imponer mi poder como hacker silenciando el receptor directamente. Sin embargo, encontrar la dirección MAC del radio fue imposible; tras tres horas de búsqueda fallida, escuché un anuncio de YouTube saliendo por las cornetas.
 
 Eso lo cambió todo. Significaba que no dependían solo del Bluetooth, sino que usaban el Wi-Fi para su música mundana. En ese momento entendí que mi objetivo de dormir aún no estaba perdido.
 
@@ -15,7 +15,7 @@ Eso lo cambió todo. Significaba que no dependían solo del Bluetooth, sino que 
 
 ## Paso 1: Localización y Reconocimiento de Red
 
-Para atacar, primero necesitaba un mapa de mi red local. El primer paso técnico fue identificar la **IP del Router (Gateway)**, que es el dispositivo que gestiona todo el tráfico de la casa. Utilicé el comando:
+Para atacar, primero necesitaba un mapa de mi red local. El primer paso fue identificar la **IP del Router**. Utilicé el comando:
 
 `ip route show`
 
@@ -37,7 +37,7 @@ El parámetro `-sn` indica un "Ping Scan", que detecta dispositivos encendidos s
 
 Con la lista de sospechosos en mano (excluyendo mi PC y el router), identifiqué los teléfonos que estaban haciendo el streaming. Mi primer movimiento fue un **Ping Flood**.
 
-`sudo ping -f 192.168.0.109`
+`sudo ping -f <ip_del_dispositivo>`
 
 El parámetro `-f` (flood) envía paquetes ICMP tan rápido como el sistema puede procesarlos o tan pronto como regresan. Ejecuté esto en varias terminales simultáneamente contra distintas IPs sospechosas. Aunque la música presentaba interrupciones, el streaming lograba recuperarse debido a que los routers modernos tienen mecanismos para priorizar o limitar este tipo de tráfico básico.
 
@@ -56,7 +56,7 @@ Al interceptar el tráfico, simplemente desactivé el reenvío de paquetes en mi
 
 ---
 
-## El Ganador: Saturación de Capa 4 (TCP SYN Flood)
+## Intento 3: Saturación de Capa 4 (TCP SYN Flood), la tercera es la vencida.
 
 Al ver que los métodos anteriores fallaban, utilicé uno mas rudo: **hping3**. A diferencia del ping común (Capa 3), este ataque se enfoca en la Capa de Transporte (Capa 4), específicamente en el protocolo **TCP**.
 
