@@ -1,5 +1,5 @@
 ---
-title: 'Cómo apagué la música de una fiesta para poder dormir'
+title: '¿Cómo apagué la música de una fiesta para poder dormir?'
 description: 'Cuando el respeto al descanso falla, el conocimiento técnico entra en acción. En este artículo detallo cómo utilicé herramientas de auditoría de red (Nmap, arpspoof y hping3) para escalar un ataque de denegación de servicio y silenciar un equipo de sonido que no permitía dormir.'
 date: '12/20/2025'
 tags: ['Linux', 'Hacking', 'Networking']
