@@ -34,11 +34,10 @@ let steps=[{
       <Step {step}/>
     {/each}
   </div>
-  {#if steps.length > 3}
-    <button class="showMore Specialbtn">
-      Mostrar Mas
-    </button>
-  {/if}
+    <a class="Specialbtn" href="/projects" data-aos="fade-up" 
+     data-aos-duration="500" data-aos-once="true">
+      Ver Todos los Proyectos
+    </a>
 </section>
 
 <style>
@@ -47,7 +46,7 @@ let steps=[{
   }
   
   .main-container{
-    padding-top: 100px;
+    padding-top: 60px;
     display: grid;
     grid-template-rows: 100px auto;
   }
@@ -64,15 +63,13 @@ let steps=[{
   .projects_container{
     margin:10px;
     
-    /* --- Estilos de Tailwind traducidos --- */
+  
     display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
-    gap: 3rem; /* 48px - gap-12 */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap: 3rem;
   }
 
-  /* Estilos para .Specialbtn (copiados de tu botón de contacto
-    para que este componente funcione)
-  */
+  
   .Specialbtn {
     background-color: #632fdd;
     color: white;
@@ -84,11 +81,11 @@ let steps=[{
     font-size: 1.1rem;
     border: 2px solid #632fdd;
     cursor: pointer;
+    margin: 10px 60px 0 auto;
   }
   .Specialbtn:hover {
     background-color: transparent;
     border: 2px solid #632fdd;
-    color: #632fdd;
   }
 
   /* Tus estilos para el botón 'Mostrar Mas' */
