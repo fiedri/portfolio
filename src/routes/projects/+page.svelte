@@ -5,82 +5,114 @@
     {
       categories: ["Full Stack", "Web application"],
       name: "Anime Beats",
-      image: "/web_apps/animeBeats.png",
-      description: "Plataforma de streaming de OP/ED",
+      image: "/web_apps/animeBeats.webp",
+      description: "Streaming de música de anime",
       tags: ["SvelteKit", "GraphQL", "MongoDB"],
       link: "https://animebeats.netlify.app/",
       github: "https://github.com/fiedri/AnimeBeats"
     },
     {
-      categories: ["UI/UX & Frontend", "Web application"],
+      categories: ["Frontend", "Web application"],
       name: "BarberHero",
-      image: "/web_apps/barber_hero.png",
-      description: "Landing page para barbería moderna",
+      image: "/web_apps/barber_hero.webp",
+      description: "Landing page para barberías",
       tags: ["JavaScript", "Svelte", "CSS"],
       link: "https://barberhero.netlify.app/",
       github: "https://github.com/fiedri/barberHero.git"
     },
     {
-      categories: ["Web application"],
+      categories: ["Frontend", "Web application"],
       name: "Pokédex",
-      image: "/web_apps/pokedex.png",
-      description: "Explorador de información Pokémon",
+      image: "/web_apps/pokedex.webp",
+      description: "Buscador de Pokémon con PokeAPI",
       tags: ["JavaScript", "HTML", "CSS"],
       link: "https://pokephiexd.netlify.app/",
       github: "https://github.com/fiedri/pokedex.git"
     },
     {
-      categories: [],
-      name: "#ROOT-BLOCKER",
-      image: "/snapshot.png",
-      description: "Extensión para bloquear sitios web y Palabras clave",
+      categories: ["Utilities", "Browser Extension"],
+      name: "Root Blocker",
+      image: "/extensions/root_blocker.png",
+      description: "Bloqueador de sitios y palabras",
       tags: ["JavaScript", "extension"],
       github: "https://github.com/fiedri/root-blocker.git",
       link: ""
     },
     {
-      categories: [],
-      name: "Monitor Bcv",
-      image: "/monitor_bcv.png",
-      description: "Bot de Telegram para monitorear el precio del dólar en Venezuela",
+      categories: ["Telegram Bot", "Automation"],
+      name: "Monitor BCV",
+      image: "/monitor_bcv.webp",
+      description: "Precio del dólar en tiempo real",
       tags: ["nodejs", "Telegram Bot"],
       github: "https://github.com/fiedri/Monitor_bcv_bot.git",
       link: ""
     },
     {
-      categories: [],
-      name: "Web Scraper for MyAnimeList",
-      Image: "/web_scraper.png",
-      description: "Web scraper para extraer información de OPs/EDs de MyAnimeList",
+      categories: ["CLI Tool", "Web Scraping"],
+      name: "MAL Scraper",
+      image: "/cli/web_scrapper1.png",
+      description: "Extractor de datos musicales",
       tags: ["nodejs", "web scraping"],
       github: "https://github.com/fiedri/web_scraping_for_animeBeats",
       link: ""
-    },{
-      categories: [],
-      name: "Motor de recomendación de anime",
-      image: "/recommender_system.png",
-      description: "Sistema de recomendación de anime basado en similitud de contenido",
-      tags: ["nodejs", "algorithms"],
-      github: "https://github.com/fiedri/anime_recomendation_motor.git",
-      link: ""
     },
     {
-      categories: [],
-      name: "#ROOT-DARK-MODE",
-      description: "Tema oscuro para vs code",
-      image: "/ex"
+      categories: ["CLI Tool", "Algorithms"],
+      name: "Anime Engine",
+      image: "/cli/arm.webp",
+      description: "Sugerencias basadas en gustos",
+      tags: ["nodejs", "algorithms"],
+      github: "https://github.com/fiedri/anime_recomendation_motor.git",
+      link: "/cli/arm.webp"
+    },
+    {
+      categories: ["Utilities", "VS Code Extension"],
+      name: "Root Dark",
+      description: "Tema oscuro para programadores",
+      image: "/extensions/dark_mode.webp",
       tags: ["vs code", "extension"],
       github: "https://github.com/fiedri/ROOT-Dark-mode-vscode.git",
       link: "https://marketplace.visualstudio.com/items?itemName=fiedri.root-dark-theme"
+    },
+    {
+      categories: ["Games", "Web application"],
+      name: "Snake Game",
+      description: "Clásico Snake en JavaScript",
+      image: "/web_apps/cyberWhorm.webp",
+      tags: ["JavaScript", "game"],
+      github: "https://github.com/fiedri/Juego-snake.git",
+      link: "https://cyberworm.netlify.app/"
+    },
+    // {
+    //   categories: [],
+    //   name: "Emoji Panel",
+    //   description: "Panel de emojis para vs code",
+    //   image: "/extensions/emoji_panel.png",
+    //   tags: ["vs code", "extension"],
+    //   github: " 
+    // }
+    {
+      categories: ["Utilities", "CLI Tool"],
+      name: "API Generator",
+      description: "Generador de bases para APIs",
+      image: "/api_template_generator.webp",
+      tags: ["nodejs", "cli tool"],
+      github: "https://github.com/fiedri/api-templates-generator.git",
+      link: ""
     }
   ];
 
   let fullWA = project.filter(p => p.categories.some(c => ["Full Stack", "Web application"].includes(c)));
-  
+  let cliTools = project.filter(p => p.categories.some(c => ["CLI Tool"].includes(c)));
+  let utilities = project.filter(p => p.categories.some(c => ["Utilities"].includes(c)));
+  let telegramBots = project.filter(p => p.categories.some(c => ["Telegram Bot"].includes(c)));
 </script>
 
 <div class="projects-page-container">
   <FeaturedProjects projects={fullWA} title="Full Stack y aplicaciones web"/>
+  <FeaturedProjects projects={cliTools} title="CLI Tools"/>
+  <FeaturedProjects projects={utilities} title="Utilidades"/>
+  <FeaturedProjects projects={telegramBots} title="Telegram Bots"/>
   <!-- <FeaturedProjects projects={uiUxProjects} title="UI/UX & Frontend"/> -->
 </div>
 

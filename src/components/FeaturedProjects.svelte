@@ -1,6 +1,7 @@
 <script lang="ts">
   let {projects, title} = $props() 
   let scrollContainer: HTMLDivElement;
+  let loadedImages = $state<Record<string, boolean>>({});
 
   function scroll(direction: 'left' | 'right') {
     const scrollAmount = 400;
@@ -10,6 +11,10 @@
         behavior: 'smooth'
       });
     }
+  }
+
+  function handleImageLoad(name: string) {
+    loadedImages[name] = true;
   }
 </script>
 
@@ -27,7 +32,18 @@
       {#each projects as project}
         <article class="project-card" data-aos="fade-left">
           <div class="image-wrapper">
-            <img src={project.image} alt={project.name} loading="lazy" />
+            {#if !loadedImages[project.name]}
+              <div class="loader-container">
+                <div class="loader"></div>
+              </div>
+            {/if}
+            <img 
+              src={project.image} 
+              alt={project.name} 
+              loading="lazy" 
+              class:loaded={loadedImages[project.name]}
+              onload={() => handleImageLoad(project.name)}
+            />
             <div class="card-overlay">
               <div class="overlay-content">
                 <h3 class="poppins">{project.name}</h3>
@@ -89,7 +105,6 @@
     overflow-x: auto;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
-    /* Padding vertical para dar espacio al escalado (hover) */
     padding: 20px 0;
     margin: -20px 0; 
   }
@@ -101,7 +116,6 @@
   .carousel-track {
     display: flex;
     gap: 25px;
-    /* Aseguramos espacio a los lados también */
     padding: 5px 10px;
   }
 
@@ -118,7 +132,7 @@
 
   .project-card:hover {
     transform: scale(1.05);
-    z-index: 50; /* Z-index alto para sobresalir */
+    z-index: 50;
     border-color: var(--violet-color);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(99, 47, 221, 0.4);
   }
@@ -128,6 +142,29 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+  }
+
+  .loader-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a2e;
+    z-index: 1;
+  }
+
+  .loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--violet-color);
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 
   .image-wrapper::after {
@@ -150,6 +187,11 @@
     object-fit: cover;
     transition: all 0.5s ease;
     filter: brightness(1) contrast(1);
+    opacity: 0;
+  }
+
+  img.loaded {
+    opacity: 1;
   }
 
   .project-card:hover img {
@@ -190,6 +232,12 @@
     margin-bottom: 15px;
     line-height: 1.4;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
+    /* Limitar a 3 líneas en PC */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .tags {
@@ -242,10 +290,46 @@
 
   @media (max-width: 640px) {
     .project-card {
-      flex: 0 0 280px;
+      flex: 0 0 240px;
+      aspect-ratio: 4 / 5;
     }
     h2 {
       font-size: 1.8rem;
+    }
+    .card-overlay {
+      opacity: 1;
+      padding: 15px;
+    }
+    .overlay-content h3 {
+      font-size: 1.3rem;
+    }
+    .overlay-content p {
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      display: block;
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
+    .tags {
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    .tags span {
+      font-size: 0.65rem;
+      padding: 2px 8px;
+    }
+    .btn-primary {
+      padding: 5px 15px;
+      font-size: 0.8rem;
+    }
+    .btn-icon {
+      font-size: 1rem;
+    }
+    img {
+      filter: brightness(0.4) contrast(1.1);
+    }
+    .image-wrapper::after {
+      background: rgba(0, 0, 0, 0.3);
     }
   }
 </style>
