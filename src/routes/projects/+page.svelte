@@ -12,6 +12,15 @@
       github: "https://github.com/fiedri/AnimeBeats"
     },
     {
+      categories: ["Full Stack", "Web application"],
+      name: "#ROOT Indexer",
+      image: "/web_apps/root_indexer.webp",
+      description: "Tu segundo Cerebro para recursos de codigo",
+      tags: ["Supabase", "v0"],
+      link: "https://v0-root-indexer-build.vercel.app/",
+      github: "https://github.com/fiedri/v0-root-indexer-build"
+    },
+    {
       categories: ["Frontend", "Web application"],
       name: "BarberHero",
       image: "/web_apps/barber_hero.webp",
@@ -36,16 +45,16 @@
       description: "Bloqueador de sitios y palabras",
       tags: ["JavaScript", "extension"],
       github: "https://github.com/fiedri/root-blocker.git",
-      link: ""
+      link: "/extensions/root_blocker.png"
     },
     {
       categories: ["Telegram Bot", "Automation"],
       name: "Monitor BCV",
       image: "/monitor_bcv.webp",
       description: "Precio del dólar en tiempo real",
-      tags: ["nodejs", "Telegram Bot"],
+      tags: ["nodejs", "Telegram", "Bot"],
       github: "https://github.com/fiedri/Monitor_bcv_bot.git",
-      link: ""
+      link: "/monitor_bcv.webp"
     },
     {
       categories: ["CLI Tool", "Web Scraping"],
@@ -54,7 +63,7 @@
       description: "Extractor de datos musicales",
       tags: ["nodejs", "web scraping"],
       github: "https://github.com/fiedri/web_scraping_for_animeBeats",
-      link: ""
+      link: "/cli/web_scrapper1.png"
     },
     {
       categories: ["CLI Tool", "Algorithms"],
@@ -99,13 +108,29 @@
       tags: ["nodejs", "cli tool"],
       github: "https://github.com/fiedri/api-templates-generator.git",
       link: ""
-    }
+    },{
+      categories: ["Telegram Bot", "Utilities"],
+      name: "NeoDown",
+      description: "Descagador de contenido de redes",
+      tags: ["Python", "Telegram", "Bot"],
+      github: "https://github.com/fiedri/downloader_bot",
+      link: ""
+    },{
+  categories: ["Desktop App", "Data Science"],
+  name: "Movie Log",
+  description: "Motor de recomendación inteligente",
+  tags: ["Python", "Tkinter", "SQLite"],
+  image: '/movie_log.webp',
+  github: "https://github.com/fiedri/movie_log",
+  link: '/movie_log.webp'
+}
   ];
 
   let fullWA = project.filter(p => p.categories.some(c => ["Full Stack", "Web application"].includes(c)));
   let cliTools = project.filter(p => p.categories.some(c => ["CLI Tool"].includes(c)));
   let utilities = project.filter(p => p.categories.some(c => ["Utilities"].includes(c)));
   let telegramBots = project.filter(p => p.categories.some(c => ["Telegram Bot"].includes(c)));
+  let desktopApps = project.filter(p => p.categories.some(c=>["Desktop App"].includes(c)))
 </script>
 
 <div class="projects-page-container">
@@ -113,7 +138,7 @@
   <FeaturedProjects projects={cliTools} title="CLI Tools"/>
   <FeaturedProjects projects={utilities} title="Utilidades"/>
   <FeaturedProjects projects={telegramBots} title="Telegram Bots"/>
-  <!-- <FeaturedProjects projects={uiUxProjects} title="UI/UX & Frontend"/> -->
+  <FeaturedProjects projects={desktopApps} title="Desktop App"/>
 </div>
 
 <style>
