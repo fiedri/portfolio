@@ -132,7 +132,7 @@
 
   .project-card:hover {
     transform: scale(1.05);
-    z-index: 50;
+    z-index: 10;
     border-color: var(--violet-color);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(99, 47, 221, 0.4);
   }
