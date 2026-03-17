@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-  import BtnToTop from '../components/BtnToTop.svelte';
-  import Footer from '../components/Footer.svelte';
-  import NavBar from '../components/navBar.svelte';
+  import BtnToTop from '../lib/components/BtnToTop.svelte';
+  import Footer from '../lib/sections/Footer.svelte';
+  import NavBar from '../lib/components/navBar.svelte';
 	import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
   import AOS from 'aos'

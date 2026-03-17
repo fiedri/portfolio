@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Step from "./Step.svelte";
+  import Step from "../components/Step.svelte";
 
 let steps=[{
     name: "BarberHero", icon: "fa-solid fa-scissors",

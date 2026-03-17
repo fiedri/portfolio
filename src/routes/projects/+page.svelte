@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FeaturedProjects from "../../components/FeaturedProjects.svelte";
+  import FeaturedProjects from "../../lib/components/FeaturedProjects.svelte";
 
   let project = [
     {
