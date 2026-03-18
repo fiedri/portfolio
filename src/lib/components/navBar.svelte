@@ -32,9 +32,6 @@
     <a href="https://github.com/fiedri" target="_blank"
       ><i class="fa-brands fa-github"></i></a
     >
-    <a href="https://x.com/@Friedrichruz" target="_blank"
-      ><i class="fa-brands fa-x-twitter"></i>
-    </a>
   </div>
   
   <ul id="link_desktop">
@@ -94,7 +91,7 @@
   /* --- Links Sociales --- */
   .social-links {
     font-size: 1.7rem;
-    min-width: 23%;
+    min-width: 10%;
     display: flex;
     justify-content: space-evenly;
   }

@@ -12,7 +12,6 @@
 <!-- <FeaturedProjects/> -->
 <div class="separator"></div>
 <Projects/>
-<div class="separator"></div>
 <About/>
 <style>
   .separator{

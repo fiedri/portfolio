@@ -50,6 +50,9 @@ let steps=[{
     display: grid;
     grid-template-rows: 100px auto;
   }
+  #projects-title{
+    text-align: center;
+  }
   
   #title-container{
     width: 90%;
@@ -73,7 +76,7 @@ let steps=[{
   .Specialbtn {
     background-color: #632fdd;
     color: white;
-    padding: 12px 24px;
+    padding: 6px 12px;
     border-radius: 9999px;
     text-decoration: none;
     font-weight: 600;
