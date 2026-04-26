@@ -6,14 +6,10 @@ let steps=[{
     href: "https://barberhero.netlify.app/",
     linkGithub: "https://github.com/fiedri/barberHero.git",
     description: `BarberHero es una moderna landing page diseñada para una barbería, destacando sus servicios y estilo. Fue construida utilizando <strong style="color: rgb(139 92 246);">JavaScript, Sveltet, HTML, y CSS</strong>`
-  },{name: "Pokédex", icon: "fa-solid fa-diagram-project", href: "https://pokephiexd.netlify.app/", linkGithub: "https://github.com/fiedri/pokedex.git",
+  },{name: "#ROOT Indexer", icon: "fa-solid fa-brain", href: "https://the-root-indexer.vercel.app/", linkGithub: "https://github.com/fiedri/the_root_indexer.git",
   description: `
-        Una <strong style="color: rgb(139 92 246);">Pokédex</strong>
-        para explorar información detallada sobre tus Pokémon favoritos.
-        Desarrollada con <strong style="color: rgb(139 92 246);">JavaScript</strong>,
-        <strong style="color: rgb(139 92 246);">HTML</strong> y
-        <strong style="color: rgb(139 92 246);">CSS</strong>.
-    
+        <strong style="color: rgb(139 92 246);">#ROOT Indexer</strong> es tu biblioteca inteligente de enlaces. 
+        Diseñada para convertir el caos de recursos técnicos en <strong style="color: rgb(139 92 246);">colecciones con propósito</strong>: roadmaps de aprendizaje y estructuras de conocimiento eficientes.
   `
   },{name: "Anime Beats",
     icon: "fa-solid fa-music",href: "https://animebeats.netlify.app/",linkGithub: "https://github.com/fiedri/AnimeBeats",
