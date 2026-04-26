@@ -4,14 +4,16 @@
             {icon: "devicon-html5-plain", name: "HTML5"},
             {icon: "devicon-css3-plain", name: "CSS3"},
             {icon: "devicon-javascript-plain", name: "JavaScript"},
-            {icon: "devicon-svelte-plain", name: "Svelte"},
+            {icon: "devicon-svelte-plain", name: "Svelte / SvelteKit"},
+            {icon: "devicon-tailwindcss-plain", name: "Tailwind CSS"},
         ]},
         {
             skillsTitle: "Backend", skillsList:[
                 {icon: "devicon-nodejs-plain", name: "Node.js"},
             {icon: "devicon-express-original", name: "Express.js"},
             {icon: "devicon-mongodb-plain", name: "MongoDB"},
-            {icon: "devicon-postgresql-plain", name: "PostgreSQL/SQL"}
+            {icon: "devicon-postgresql-plain", name: "PostgreSQL/SQL"},
+            {icon: "fa-solid fa-database", name: "Drizzle ORM"}
             ]
         },
         {skillsTitle: "Otras", skillsList:[
