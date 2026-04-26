@@ -1,6 +1,6 @@
 <script>
   import { fly } from 'svelte/transition';
-  import { typewriter } from "../lib/typewriter";
+  import { typewriter } from "../typewriter";
   import { onMount } from 'svelte';
   let show = $state(false)
   onMount(()=>{

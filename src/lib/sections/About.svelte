@@ -1,6 +1,6 @@
 <script>
   import Skills from "./Skills.svelte";
-
+  import "./about.css";
   let benefits = [
     {
       name: "Autodidacta",
@@ -18,26 +18,50 @@
         "Me gusta experimentar y darle mi toque a todo lo que hago. Ya sea una página de sorteos o una barbería falsa, siempre intento que se vea cool.",
     },
   ];
+
+  let certificates = [
+    {
+      title: "Legacy Responsive Web Design",
+      date: 2024,
+      issuer: "freeCodeCamp",
+      issuerLogo: "/certificates/logo.webp",
+      verifyLink: "https://www.freecodecamp.org/certification/friedrichruiz/responsive-web-design",
+    },{
+      title: "Relational Databases",
+      date: 2026,
+      issuer: "freeCodeCamp",
+      issuerLogo: "/certificates/logo.webp",
+      verifyLink: "https://www.freecodecamp.org/certification/friedrichruiz/relational-database-v8",
+    },
+    {
+      title: "Solana LATAM Builders Bootcamp",
+      date: 2026,
+      issuer: "Way Learn",
+      issuerLogo: "https://images.seeklogo.com/logo-png/42/2/solana-sol-logo-png_seeklogo-423095.png",
+      verifyLink: "/certificates/certificado_solana.png"
+    }
+  ];
 </script>
 
 <section id="about" class="about-section">
   <div class="title-block">
-    <h6 class="subtitle">
-      ¿Quieres saber más?
-    </h6>
+    <h6 class="subtitle">¿Quieres saber más?</h6>
     <h3 class="title">
       Un poco <span class="highlight poppins">sobre</span> mí.
     </h3>
   </div>
 
-  <p class="intro-text poppins">
-    Soy . . .
-  </p>
+  <p class="intro-text poppins">Soy . . .</p>
 
   <div class="benefits-list">
     {#each benefits as benefit, index}
-      <div class="benefit-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
-        <p class="benefit-number poppins">0{index+1}</p>
+      <div
+        class="benefit-item"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <p class="benefit-number poppins">0{index + 1}</p>
         <div class="benefit-text">
           <h3 class="benefit-name">
             {benefit.name}
@@ -48,34 +72,67 @@
     {/each}
   </div>
 </section>
-<Skills/>
+<Skills />
+<section class="certificates-section">
+  <h3 class="title">Certificados</h3>
+  <div class="certificates-container">
+    {#each certificates as certificate}
+      <div class="certificate" data-aos="flip-up"
+      data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000" data-aos-once="true">
+        <div class="certificate-header">
+          {#if certificate.issuerLogo}
+            <div class="img-container">
+            <img src={certificate.issuerLogo} alt="Logo del emisor" />
+          </div>
+          {/if}
+          <div>
+            <h4 class="certification-title {certificate.issuerLogo ? '' : 'whithour-logo'}">{certificate.title}</h4>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="certification-info">
+          <p class="issuer poppins">{certificate.issuer}</p>
+          <span class="date poppins">{certificate.date}</span>
+          <a href="{certificate.verifyLink}" target="_blank" class="verify-link">
+            <p class="verify-text">Verificar →</p>
+          </a>
+        </div>
+      </div>
+    {/each}
+  </div>
+</section>
 
 <style>
   /* Si 'Poppins' no está importada globalmente, 
     deberías importarla al inicio de este <style> 
   */
   .poppins {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   /* --- Contenedor Principal --- */
   .about-section {
-    /* py-20 pt-10 -> pt-10 anula el pt- de py-20 */
-    padding-top: 2.5rem; /* pt-10 */
-    padding-bottom: 5rem; /* py-20 */
-    
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    gap: 4rem; /* gap-16 */
+  }
+  .certificates-section {
+    gap: 1rem;
+    padding-bottom: 5rem;
+  }
+  .certificates-section,
+  .about-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem; /* gap-16 */
     position: relative;
-    
     padding-left: 1rem; /* px-4 */
     padding-right: 1rem;
-    max-width: 80rem; /* max-w-7xl */
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
-    color: white; /* Color base asumido */
+    color: white;
   }
 
   /* --- Bloque del Título --- */
@@ -86,14 +143,14 @@
     text-align: center;
     position: relative;
     width: 100%;
-    
+
     padding-top: 2rem; /* py-8 */
     padding-bottom: 2rem;
     padding-left: 1rem; /* px-4 */
     padding-right: 1rem;
   }
   .title-block::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -102,7 +159,7 @@
     background-color: rgb(109 40 217); /* bg-violet-700 */
   }
   .title-block::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: 0;
@@ -180,9 +237,8 @@
     color: rgb(203 213 225); /* text-slate-300 (asumido) */
   }
 
-
   /* --- Media Queries (Puntos de quiebre de Tailwind) --- */
-  
+
   /* sm: 640px */
   @media (min-width: 640px) {
     .about-section {

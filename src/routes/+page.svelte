@@ -1,8 +1,8 @@
 <script>
-  import About from "../components/About.svelte";
-  import FeaturedProjects from "../components/FeaturedProjects.svelte";
-  import Hero from "../components/hero.svelte";
-  import Projects from "../components/Projects.svelte";
+  import About from "../lib/sections/About.svelte";
+  import FeaturedProjects from "../lib/components/FeaturedProjects.svelte";
+  import Hero from "../lib/sections/hero.svelte";
+  import Projects from "../lib/sections/Projects.svelte";
   import { onMount } from "svelte";
 
   
@@ -12,7 +12,6 @@
 <!-- <FeaturedProjects/> -->
 <div class="separator"></div>
 <Projects/>
-<div class="separator"></div>
 <About/>
 <style>
   .separator{

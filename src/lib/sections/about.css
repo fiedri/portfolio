@@ -1,0 +1,104 @@
+.certificates-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-flow: wrap;
+  align-items: stretch;
+}
+
+.certificate-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.whithour-logo{
+    margin-left: 5px;
+}
+.certificate {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #632fdd;
+  background-color: #1a1a2e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.certificate:hover {
+  transform: translateY(-10px);
+}
+
+.certification-title {
+  font-size: 1.2rem;
+}
+
+.certification-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0;
+}
+
+.date {
+  font-size: 0.85rem;
+}
+.date,
+.issuer {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgb(203 213 225);
+}
+
+.img-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.separator {
+  margin: 3px;
+}
+.verify-link {
+  min-width: 15%;
+  max-width: 36%;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.verify-link .verify-text {
+  position: relative;
+  z-index: 10;
+  padding: 5px;
+}
+
+/* Efecto hover del botón "ver" */
+.verify-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.verify-link:hover::after {
+  transform: scaleX(1);
+}
+
+.verify-link:hover .verify-text {
+  color: #1a1a2e; /* Cambia el color del texto al hacer hover */
+}
