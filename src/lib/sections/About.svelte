@@ -3,19 +3,19 @@
   import "./about.css";
   let benefits = [
     {
-      name: "Autodidacta",
+      name: "Fundamentos e Independencia Técnica",
       description:
-        "Aunque estudio en la universidad, lo que más he aprendido ha sido por mi cuenta, haciendo proyectos reales, equivocándome y mejorando poco a poco.",
+        "Combino mi formación en Ingeniería Informática con una disciplina autodidacta orientada al estudio de documentación oficial. Mi enfoque técnico se basa en la simplicidad: elijo herramientas por su rendimiento y adecuación al problema, evitando la complejidad innecesaria.",
     },
     {
-      name: "Apasionado por crear cosas útiles",
+      name: "Resolución Pragmática de Problemas",
       description:
-        "No programo por programar. Me gusta hacer cosas que realmente sirvan, aunque sean simples. Si puedo compartirlas con otros, mejor.",
+        "Abordo el desarrollo con determinación e insistencia hasta garantizar que el sistema funcione con total estabilidad. No construyo software por acumular líneas de código, sino para entregar soluciones funcionales, escalables y orientadas a resolver necesidades reales.",
     },
     {
-      name: "Creativo",
+      name: "Calidad de Código y Optimización",
       description:
-        "Me gusta experimentar y darle mi toque a todo lo que hago. Ya sea una página de sorteos o una barbería falsa, siempre intento que se vea cool.",
+        "Entiendo el desarrollo como un compromiso con la calidad a largo plazo. Me enfoco en escribir código limpio, modular y mantenible, cuidando tanto la optimización en la ejecución (renderizado, gestión de memoria y consumo de APIs) como la fluidez de la experiencia final del usuario.",
     },
   ];
 
@@ -54,11 +54,11 @@ verifyLink: "/certificates/certificacion_servicio_tecnico.jpeg"
   <div class="title-block">
     <h6 class="subtitle">¿Quieres saber más?</h6>
     <h3 class="title">
-      Un poco <span class="highlight poppins">sobre</span> mí.
+      <span class="highlight poppins">Sobre</span> mí
     </h3>
   </div>
 
-  <p class="intro-text poppins">Soy . . .</p>
+  <p class="intro-text poppins">Diseño e implemento software priorizando la eficiencia, la arquitectura limpia y la mantenibilidad del código.</p>
 
   <div class="benefits-list">
     {#each benefits as benefit, index}
