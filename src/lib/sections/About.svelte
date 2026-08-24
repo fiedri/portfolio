@@ -39,6 +39,13 @@
       issuer: "Way Learn",
       issuerLogo: "https://images.seeklogo.com/logo-png/42/2/solana-sol-logo-png_seeklogo-423095.png",
       verifyLink: "/certificates/certificado_solana.png"
+    },
+    {
+title: "Servicio Tecnico a equipos y usuario",
+date: 2026,
+issuer: "Universidad Politécnica Territorial de Falcón 'Alonso Gamero'",
+issuerLogo: "",
+verifyLink: "/certificates/certificacion_servicio_tecnico.jpeg"
     }
   ];
 </script>

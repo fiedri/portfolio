@@ -15,9 +15,11 @@
             <p class="ver-text">GITHUB <i class="fa-brands fa-github"></i>
             </p>
         </a>
-        <a class="ver-button" href="{step.href}" target="_blank">
-            <p class="ver-text">ver &rarr;</p>
-        </a>
+        {#if step.href}
+            <a class="ver-button" href={step.href} target="_blank">
+                <p class="ver-text">ver &rarr;</p>
+            </a>
+        {/if}
     </div>
 </article>
 

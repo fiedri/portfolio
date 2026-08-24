@@ -6,17 +6,17 @@ let steps=[{
     href: "https://barberhero.netlify.app/",
     linkGithub: "https://github.com/fiedri/barberHero.git",
     description: `BarberHero es una moderna landing page diseñada para una barbería, destacando sus servicios y estilo. Fue construida utilizando <strong style="color: rgb(139 92 246);">JavaScript, Sveltet, HTML, y CSS</strong>`
-  },{name: "#ROOT Indexer", icon: "fa-solid fa-brain", href: "https://the-root-indexer.vercel.app/", linkGithub: "https://github.com/fiedri/the_root_indexer.git",
+  },{name: "Vibe", icon: "fa-solid fa-record-vinyl", linkGithub: "https://github.com/fiedri/vibe-player",
   description: `
-        <strong style="color: rgb(139 92 246);">#ROOT Indexer</strong> es tu biblioteca inteligente de enlaces. 
-        Diseñada para convertir el caos de recursos técnicos en <strong style="color: rgb(139 92 246);">colecciones con propósito</strong>: roadmaps de aprendizaje y estructuras de conocimiento eficientes.
+        <strong style="color: rgb(139 92 246);">Vibe</strong> es un reproductor de música local minimalista y <strong style="color: rgb(139 92 246);">100% offline</strong>: sin anuncios ni rastreo.
+        Playlists exportables en JSON, navegación por álbumes, artistas y manejo fluido de miles de canciones.
   `
   },{name: "Anime Beats",
     icon: "fa-solid fa-music",href: "https://animebeats.netlify.app/",linkGithub: "https://github.com/fiedri/AnimeBeats",
   description: `
       Plataforma de *streaming* de OP/ED curados.
       Stack: <strong style="color: rgb(139 92 246);">SvelteKit</strong>, <strong style="color: rgb(139 92 246);">GraphQL (AniList)</strong> y <strong style="color: rgb(139 92 246);">MongoDB</strong>.
-      Destaca por la curación de nicho (<strong style="color: rgb(34 197 94);">Donghua/Aeni</strong>) y la solución de problemas de <strong style="color: rgb(139 92 246);">copyright/embedding</strong>.
+     
     `
   }]
 </script>

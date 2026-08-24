@@ -31,6 +31,15 @@
     },
     {
       categories: ["Frontend", "Web application"],
+      name: "Spotify Clone",
+      image: "/web_apps/spotify_clone.webp",
+      description: "Clon de Spotify con reproducción de música",
+      tags: ["SvelteKit", "TypeScript", "Tailwind"],
+      link: "https://clone-spo-friedrich.netlify.app/",
+      github: "https://github.com/fiedri/spotify_clone"
+    },
+    {
+      categories: ["Frontend", "Web application"],
       name: "Pokédex",
       image: "/web_apps/pokedex.webp",
       description: "Buscador de Pokémon con PokeAPI",
@@ -123,6 +132,14 @@
   image: '/movie_log.webp',
   github: "https://github.com/fiedri/movie_log",
   link: '/movie_log.webp'
+},{
+  categories: ["Mobile App", "Android"],
+  name: "Vibe",
+  description: "Reproductor de música local, offline y sin anuncios",
+  tags: ["Svelte", "Capacitor"],
+  image: "/mobile/vibe.webp",
+  github: "https://github.com/fiedri/vibe-player",
+  link: ""
 }
   ];
 
@@ -131,6 +148,7 @@
   let utilities = project.filter(p => p.categories.some(c => ["Utilities"].includes(c)));
   let telegramBots = project.filter(p => p.categories.some(c => ["Telegram Bot"].includes(c)));
   let desktopApps = project.filter(p => p.categories.some(c=>["Desktop App"].includes(c)))
+  let mobileApps = project.filter(p => p.categories.some(c=>["Mobile App"].includes(c)))
 </script>
 
 <div class="projects-page-container">
@@ -139,6 +157,7 @@
   <FeaturedProjects projects={utilities} title="Utilidades"/>
   <FeaturedProjects projects={telegramBots} title="Telegram Bots"/>
   <FeaturedProjects projects={desktopApps} title="Desktop App"/>
+  <FeaturedProjects projects={mobileApps} title="Mobile App"/>
 </div>
 
 <style>

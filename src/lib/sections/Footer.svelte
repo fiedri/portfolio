@@ -24,20 +24,6 @@
       </a>
     </p>
     <p class="contact-item">
-      <i class="fa-brands fa-square-whatsapp"></i>
-      <b class="contact-label">Whatsapp</b>
-      <a
-        href="https://wa.me/584121379204"
-        target="_blank"
-        class="contact-link"
-      >
-        +584121379204
-        <sup class="contact-icon-sup">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </sup>
-      </a>
-    </p>
-    <p class="contact-item">
       <i class="fa-brands fa-github-square"></i>
       <b class="contact-label">GitHub</b>
       <a
@@ -45,7 +31,7 @@
         target="_blank"
         class="contact-link"
       >
-        1phiexdric
+       fiedri 
         <sup class="contact-icon-sup">
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </sup>
@@ -62,6 +48,20 @@
         @Friedrichruz
         <sup class="contact-icon-sup">
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </sup>
+      </a>
+    </p>
+    <p class="contact-item">
+      <i class="fa-solid fa-file-pdf"></i>
+      <b class="contact-label">CV</b>
+      <a
+        href="/Friedrich_Ruiz-Curriculum.pdf"
+        download="Friedrich_Ruiz-Curriculum.pdf"
+        class="contact-link"
+      >
+        Descargar
+        <sup class="contact-icon-sup">
+          <i class="fa-solid fa-download"></i>
         </sup>
       </a>
     </p>
@@ -114,7 +114,7 @@
     margin: 0; /* Reseteo */
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espacio entre icono, label y link */
+    gap: 0.5rem; 
   }
   
   .contact-label {
@@ -134,11 +134,7 @@
     /* text-xs, scale-75, pl-0.5 */
     font-size: 0.75rem; /* 12px */
     padding-left: 0.125rem; /* 2px */
-    
-    /* 'transform: scale(0.75)' es redundante 
-      ya que el ícono interno también lo tiene.
-      Lo aplicamos al 'i' de adentro.
-    */
+
   }
   
   .contact-icon-sup i {

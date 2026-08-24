@@ -54,7 +54,9 @@
                   {/each}
                 </div>
                 <div class="actions">
-                  <a href={project.link} target="_blank" class="btn-primary">Ver</a>
+                  {#if project.link}
+                    <a href={project.link} target="_blank" class="btn-primary">Ver</a>
+                  {/if}
                   <a href={project.github} target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i></a>
                 </div>
               </div>
